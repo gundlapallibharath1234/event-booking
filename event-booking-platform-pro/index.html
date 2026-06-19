@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Booking Platform</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>🎉 Event Booking Platform</h1>
+
+<input type="text" id="search" placeholder="Search Events..." onkeyup="filterEvents()">
+
+<div id="events">
+<div class="event-card">
+<h2>Tech Fest 2026</h2>
+<p>Technology Conference</p>
+<button onclick="openForm('Tech Fest 2026')">Book Now</button>
+</div>
+
+<div class="event-card">
+<h2>Music Night</h2>
+<p>Live Music Event</p>
+<button onclick="openForm('Music Night')">Book Now</button>
+</div>
+
+<div class="event-card">
+<h2>Startup Meetup</h2>
+<p>Networking Event</p>
+<button onclick="openForm('Startup Meetup')">Book Now</button>
+</div>
+</div>
+
+<div id="bookingForm" class="modal">
+<div class="modal-content">
+<h2>Book Event</h2>
+<input type="text" id="name" placeholder="Name">
+<input type="email" id="email" placeholder="Email">
+<input type="tel" id="phone" placeholder="Phone">
+<button onclick="confirmBooking()">Confirm Booking</button>
+</div>
+</div>
+
+<h2>Your Bookings</h2>
+<ul id="bookingList"></ul>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
